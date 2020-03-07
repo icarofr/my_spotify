@@ -1,11 +1,12 @@
-<?php
-
-$genreArray = Connection::getConnection()->prepare("SELECT");
-$genreArray->execute();
-if ($genreArray->rowCount() < 1) {
-    echo "Your search returned no queries." . PHP_EOL;
-    die;
-}
-$genreArray = $genreArray->fetchAll(PDO::FETCH_ASSOC);
-$genreJson = json_encode($genreArray, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-echo "Genres =>" . PHP_EOL . $genreJson;
+<article class="mw7 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+    <div class="tc">
+        <img src="http://tachyons.io/img/avatar_1.jpg" class="br4 h5 w5 dib" title="Photo of a kitty staring at you">
+        <h1 class="f4">Mimi Whitehouse</h1>
+        <hr class="mw3 bb bw1 b--black-10">
+    </div>
+    <p class="lh-copy measure center f6 black-70">
+        Quite affectionate and outgoing.
+        She loves to get chin scratches and will
+        roll around on the floor waiting for you give her more of them.
+    </p>
+</article>

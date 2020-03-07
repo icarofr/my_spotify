@@ -14,7 +14,9 @@ function searchArtist($artistQuery)
     }
     $artistArray = $artistArray->fetchAll(PDO::FETCH_ASSOC);
     $artistJson = json_encode($artistArray, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-    echo "Artists =>" . PHP_EOL . $artistJson;
+    $tempFile = fopen(".temp.json", "w");
+    fwrite($tempFile, $artistJson);
+    fclose($tempFile);
 }
 
 function searchAlbum($albumQuery)
@@ -33,7 +35,9 @@ function searchAlbum($albumQuery)
     }
     $albumArray = $albumArray->fetchAll(PDO::FETCH_ASSOC);
     $albumJson = json_encode($albumArray, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-    echo "Albums =>" . PHP_EOL . $albumJson;
+    $tempFile = fopen(".temp.json", "w");
+    fwrite($tempFile, $albumJson);
+    fclose($tempFile);
 }
 
 function searchTrack($trackQuery)
@@ -51,7 +55,9 @@ function searchTrack($trackQuery)
     }
     $trackArray = $trackArray->fetchAll(PDO::FETCH_ASSOC);
     $trackJson = json_encode($trackArray, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-    echo "Tracks =>" . PHP_EOL . $trackJson;
+    $tempFile = fopen(".temp.json", "w");
+    fwrite($tempFile, $trackJson);
+    fclose($tempFile);
 }
 
 function searchGenre($genreQuery)
@@ -66,7 +72,9 @@ function searchGenre($genreQuery)
     }
     $genreArray = $genreArray->fetchAll(PDO::FETCH_ASSOC);
     $genreJson = json_encode($genreArray, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-    echo "Genres =>" . PHP_EOL . $genreJson;
+    $tempFile = fopen(".temp.json", "w");
+    fwrite($tempFile, $genreJson);
+    fclose($tempFile);
 }
 
 function searchAll($needle, $haystack)
