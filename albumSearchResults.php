@@ -1,7 +1,7 @@
 <?php
 require "mainApi.php";
-searchAll($_GET['artistSearch'], "artist");
-$artistJson = json_decode(file_get_contents(".temp.json"));
+searchAll($_GET['albumSearch'], "album");
+$albumJson = json_decode(file_get_contents(".temp.json"));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ $artistJson = json_decode(file_get_contents(".temp.json"));
   <script src="jquery.js"></script>
   <script src="react.production.min.js"></script>
   <script src="react-dom.production.min.js"></script>
-  <script src="artistApp.js"></script>
+  <script src="albumApp.js"></script>
 </body>
 
 </html>
