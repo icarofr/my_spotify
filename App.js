@@ -22,7 +22,14 @@ for (i = 0; i < artistJson.length; i++) {
             class: "br-100 h5 w5 dib",
             src: artistJson[i]["photo"]
           }),
-          React.createElement("h1", { class: "f4" }, artistJson[i]["name"])
+          React.createElement(
+            "a",
+            {
+              href:
+                "artistSearchResults.php?artistSearch=" + artistJson[i]["name"]
+            },
+            React.createElement("h1", { class: "f4 link black grow no-underline" }, artistJson[i]["name"])
+          )
         ]),
         React.createElement(
           "p",
@@ -54,7 +61,7 @@ for (i = 0; i < artistJson.length; i++) {
 const App = () => {
   return React.createElement(
     "div",
-    { class: "avenir" },
+    { class: "avenir bg-washed-green" },
     React.createElement("div", { class: "bg-green pv5 tc white" }, [
       React.createElement("div", { class: "f1" }, "Stupefy!"),
       React.createElement(
@@ -64,7 +71,6 @@ const App = () => {
       )
     ]),
     parsedArtists
-    // React.createElement("p", {}, "caralho")
   );
 };
 ReactDOM.render(React.createElement(App), document.getElementById("root"));
