@@ -19,6 +19,7 @@ searchAll($_GET['trackSearch'], "track");
   <script src="react.production.min.js"></script>
   <script src="react-dom.production.min.js"></script>
   <script src="trackApp.js"></script>
+  <script src="test.js"></script>
 </body>
 
 </html>

@@ -18,7 +18,14 @@ for (i = 0; i < trackJson.length; i++) {
         "article",
         { class: "mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" },
         React.createElement("div", { class: "tc" }, [
-          ,
+          React.createElement(
+            "a",
+            { id: "play" + i },
+            React.createElement("img", {
+              class: "br-100 h3 w3 dib",
+              src: "play.png"
+            })
+          ),
           React.createElement(
             "a",
             {
@@ -76,6 +83,9 @@ for (i = 0; i < trackJson.length; i++) {
       )
     )
   );
+  $("#play" + i).on('click', function() {
+    alert('a');
+  });
 }
 
 const App = () => {
