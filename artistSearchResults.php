@@ -1,7 +1,6 @@
 <?php
 require "mainApi.php";
 searchAll($_GET['artistSearch'], "artist");
-$artistJson = json_decode(file_get_contents(".temp.json"));
 ?>
 <!DOCTYPE html>
 <html lang="en">

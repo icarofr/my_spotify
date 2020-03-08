@@ -82,7 +82,7 @@ const App = () => {
       React.createElement(
         "div",
         { class: "f5" },
-        "Magically iterating through all your favorite albums."
+        "Magically iterating through all your favorite artists."
       )
     ]),
     parsedAlbums
