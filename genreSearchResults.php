@@ -1,0 +1,24 @@
+<?php
+require "mainApi.php";
+searchAll($_GET['genreSearch'], "genre");
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Stupefy - Search</title>
+  <link rel="stylesheet" href="tachyons.css" />
+</head>
+
+<body>
+  <div id="root">
+  </div>
+  <script src="jquery.js"></script>
+  <script src="react.production.min.js"></script>
+  <script src="react-dom.production.min.js"></script>
+  <script src="genreApp.js"></script>
+</body>
+
+</html>

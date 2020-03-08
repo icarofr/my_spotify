@@ -15,20 +15,20 @@
           Magically iterating through all your favorite artists.
         </div>
       </div>
-      <div class="pa4-l artist-block">
-        <form action="artistSearchResults.php" method="GET" class="bg-light-green mw7 center pb4 pl4 pr4 pt3 br2-ns ba b--black-10">
+      <div class="pa4-l album-block">
+        <form action="albumSearchResults.php" method="GET" class="bg-light-green mw7 center pb4 pl4 pr4 pt3 br2-ns ba b--black-10">
           <fieldset class="cf bn ma0 pa0">
               <div class="pb2 tc">
-                <a class="f6 link dim grow ph3 pv2 mb2 dib white bg-dark-green" href="index.html">Artist</a>
-                <a class="f6 link dim grow ba ph3 pv2 mb2 dib dark-green" href="albumSearch.html">Album</a>
+                <a class="f6 link dim grow ba ph3 pv2 mb2 dib dark-green" href="index.html">Artist</a>
+                <a class="f6 link dim grow ph3 pv2 mb2 dib white bg-dark-green" href="albumSearch.html">Album</a>
                 <a class="f6 link dim grow ba ph3 pv2 mb2 dib dark-green" href="genreSearch.html">Genre</a>            <div class="cf">
               <input
                 class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns"
                 placeholder=""
                 type="text"
-                name="artistSearch"
-                value="Artist name"
-                id="artist-search"
+                name="albumSearch"
+                value="Album name"
+                id="album-search"
               />
               <input
                 class="f6 f5-l button-reset fl grow pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns"
@@ -39,10 +39,10 @@
           </fieldset>
         </form>
       </div>
-      
     </div>
     <script src="jquery.js"></script>
     <script src="react.production.min.js"></script>
     <script src="react-dom.production.min.js"></script>
+    <script src="indexApp.js"></script>
   </body>
 </html>
