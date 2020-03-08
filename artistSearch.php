@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="artistSearchResults.php" method="post">
+    <form action="artistSearchResults.html" method="post">
         <input type="text" name="artistSearch" id="">
         <button type="submit">Submit</button></form>
 </body>
