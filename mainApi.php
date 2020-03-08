@@ -62,7 +62,7 @@ function searchTrack($trackQuery)
 
 function searchGenre($genreQuery)
 {
-    $genreArray = Connection::getConnection()->prepare("SELECT genres.*, (SELECT GROUP_CONCAT(genres_albums.album_id)
+    $genreArray = Connection::getConnection()->prepare("SELECT genres.*, (SELECT GROUP_CONCAT(genres_albums.album_id, \" \")
     FROM genres_albums WHERE genres_albums.genre_id=genres.id) AS 'albums_list' FROM genres WHERE genres.name 
     LIKE '%" . $genreQuery . "%'");
     $genreArray->execute();
@@ -100,3 +100,5 @@ function searchAll($needle, $haystack)
             "Invalid command! Please try again." . PHP_EOL;
     }
 }
+
+searchTrack("dolphin");

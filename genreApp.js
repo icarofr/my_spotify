@@ -18,10 +18,6 @@ for (i = 0; i < genreJson.length; i++) {
         "article",
         { class: "mw6 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" },
         React.createElement("div", { class: "tc" }, [
-          React.createElement("img", {
-            class: "br-100 h5 w5 dib",
-            src: genreJson[i]["photo"]
-          }),
           React.createElement(
             "a",
             {
@@ -40,16 +36,12 @@ for (i = 0; i < genreJson.length; i++) {
               React.createElement("div", {}, genreJson[i]["id"])
             ],
             [
-              React.createElement("div", { class: "b pt2 f5" }, "Description:"),
-              React.createElement("div", {}, genreJson[i]["description"])
+              React.createElement("div", { class: "b pt2 f5" }, "Name:"),
+              React.createElement("div", {}, genreJson[i]["name"])
             ],
             [
-              React.createElement("div", { class: "b pt2 f5" }, "Bio:"),
-              React.createElement("div", {}, genreJson[i]["bio"])
-            ],
-            [
-              React.createElement("div", { class: "b pt2 f5" }, "Albums:"),
-              React.createElement("div", {}, genreJson[i]["genre_albums"])
+              React.createElement("div", { class: "b pt2 f5" }, "Albums list:"),
+              React.createElement("div", {}, genreJson[i]["albums_list"])
             ]
           ]
         )
